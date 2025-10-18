@@ -44,13 +44,13 @@ jobs:
           ls -R -la
       # build the blazor app
       - name: Setup .NET SDK
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v5
         with:
-          dotnet-version: '7.0.x'
+          dotnet-version: '8.0.x'
       
       - name: Build Blazor App
         run: |
-          dotnet build blazorTest/blazorTest.csproj --configuration Release 
+          dotnet build blazorTest/BlazorAppTest/BlazorAppTest.csproj --configuration Release 
 
       # download the build output to my local machine for testing
       - name: Download Build Output
