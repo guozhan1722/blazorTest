@@ -54,7 +54,7 @@ jobs:
 
       # download the build output to my local machine for testing
       - name: Download Build Output
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v5
         with:
           name: blazor-build
           
