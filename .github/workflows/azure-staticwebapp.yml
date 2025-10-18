@@ -50,7 +50,7 @@ jobs:
       
       - name: Build Blazor App
         run: |
-          dotnet build blazorTest/BlazorAppTest/BlazorAppTest.csproj --configuration Release 
+          dotnet build BlazorAppTest/BlazorAppTest.csproj --configuration Release 
 
       # download the build output to my local machine for testing
       - name: Download Build Output
