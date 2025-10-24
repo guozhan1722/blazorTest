@@ -59,7 +59,7 @@ jobs:
           dotnet publish BlazorAppTest/BlazorAppTest.csproj -c Release -o ${{ github.workspace }}/publish
      
       - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v4
         with:
           name: my-app-release
           path: ${{ github.workspace }}/publish
@@ -72,11 +72,8 @@ jobs:
         uses: actions/download-artifact@v5
         with:
           name: my-app-release
-          path: ./downloaded-artifacts# download the build output to my local machine for testing
-      - name: Download Build Output
-        uses: actions/download-artifact@v5
-        with:
-          name: blazor-build
+          path: ./downloaded-artifacts
+          # download the build output to my local machine for testing
           
            
 
