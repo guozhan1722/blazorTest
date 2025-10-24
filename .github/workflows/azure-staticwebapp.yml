@@ -49,9 +49,9 @@ jobs:
           dotnet-version: '8.0.x'
       
       - name: Build Blazor App
+       # dotnet build BlazorAppTest/BlazorAppTest.csproj --configuration Release 
         run: |
-          # dotnet build BlazorAppTest/BlazorAppTest.csproj --configuration Release 
-          dotnet publish -c Release -o release
+          dotnet publish BlazorAppTest/BlazorAppTest.csproj --configuration Release -o release
       # download the build output to my local machine for testing
       - name: Download Build Output
         uses: actions/download-artifact@v5
