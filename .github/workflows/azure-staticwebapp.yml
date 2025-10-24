@@ -50,8 +50,8 @@ jobs:
       
       - name: Build Blazor App
         run: |
-          dotnet build BlazorAppTest/BlazorAppTest.csproj --configuration Release 
-
+          # dotnet build BlazorAppTest/BlazorAppTest.csproj --configuration Release 
+          dotnet publish -c Release -o release
       # download the build output to my local machine for testing
       - name: Download Build Output
         uses: actions/download-artifact@v5
