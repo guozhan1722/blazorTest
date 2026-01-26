@@ -1,9 +1,26 @@
 ﻿@page "/"
+@rendermode InteractiveServer
 
 <PageTitle>Home</PageTitle>
 
 <h1>Hello,  THis is a test blazor world!</h1>
 
+<h3>Jan 25, 2026 touched to delete some tracked files</h3>
+
 <p>This line was added as a test.</p>
 
 Welcome to your new app.
+
+<p>Msg is : @Message</p>
+
+<button class="btn btn-primary" @onclick="AddNewBtn">Add New</button>
+
+@code 
+{
+    private string Message = "Start";
+
+    private void AddNewBtn()
+    {
+        Message = "Clicked";
+    }
+}
